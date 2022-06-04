@@ -20,6 +20,21 @@ while (run)
             double totalfare = invoiceGenerator.CalculateFare(rides);            
             System.Console.WriteLine("Toatal Fare:" + totalfare);
             break;
+        case 3:        
+            InvoiceGenerator uc3 = new InvoiceGenerator();
+            MultipleRides[] rides1 = { new MultipleRides(10, 20), new MultipleRides(15, 25), new MultipleRides(20, 30) };
+            double Fare2 = uc3.CalculateFare(rides1);
+
+            int NumOfRides = 3;
+            double AverageFare = Fare2 / NumOfRides;
+
+            Console.WriteLine("Total Number of Rides : " + NumOfRides);
+            Console.WriteLine("The Aggregate Fare Value for All Rides :" + Fare2);
+            Console.WriteLine("Average Fare per Ride :" + AverageFare + "\n");
+            break;
+        default:
+            Console.WriteLine("Please choose the above Options only");
+            break;
     }
 }
 
